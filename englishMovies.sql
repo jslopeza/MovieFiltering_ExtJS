@@ -1,0 +1,218 @@
+-- phpMyAdmin SQL Dump
+-- version 4.0.4.1
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Jul 08, 2014 at 04:00 AM
+-- Server version: 5.6.12
+-- PHP Version: 5.5.3
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `five_tech`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `englishMovies`
+--
+
+CREATE TABLE IF NOT EXISTS `englishMovies` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(256) NOT NULL,
+  `year` year(4) NOT NULL,
+  `runtime` int(11) NOT NULL,
+  `genre` varchar(256) NOT NULL,
+  `director` varchar(256) NOT NULL,
+  `actors` varchar(256) NOT NULL,
+  `poster` text NOT NULL,
+  `imdbID` varchar(256) NOT NULL,
+  `rated` varchar(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=179 ;
+
+--
+-- Dumping data for table `englishMovies`
+--
+
+INSERT INTO `englishMovies` (`id`, `title`, `year`, `runtime`, `genre`, `director`, `actors`, `poster`, `imdbID`, `rated`) VALUES
+(8, '12 Years a Slave', 2013, 134, 'Biography, Drama, History', 'Steve McQueen', 'Chiwetel Ejiofor, Dwight Henry, Dickie Gravois, Bryan Batt', 'http://ia.media-imdb.com/images/M/MV5BMjExMTEzODkyN15BMl5BanBnXkFtZTcwNTU4NTc4OQ@@._V1_SX300.jpg', 'tt2024544', 'R'),
+(9, '2 Guns', 2013, 109, 'Action, Comedy, Crime', 'Baltasar Kormákur', 'Denzel Washington, Mark Wahlberg, Paula Patton, Edward James Olmos', 'http://ia.media-imdb.com/images/M/MV5BNTQ5MTgzNDg4OF5BMl5BanBnXkFtZTcwMjAyODEzOQ@@._V1_SX300.jpg', 'tt1272878', 'R'),
+(10, '21 & Over', 2013, 93, 'Comedy', 'Jon Lucas, Scott Moore', 'Miles Teller, Skylar Astin, Justin Chon, Sarah Wright', 'http://ia.media-imdb.com/images/M/MV5BMjI0NTExOTI0N15BMl5BanBnXkFtZTcwMDA0ODE3OA@@._V1_SX300.jpg', 'tt1711425', 'R'),
+(11, '47 Ronin', 2013, 118, 'Action, Adventure, Fantasy', 'Carl Rinsch', 'Keanu Reeves, Hiroyuki Sanada, Ko Shibasaki, Tadanobu Asano', 'http://ia.media-imdb.com/images/M/MV5BMTc0MjE2NzE0OV5BMl5BanBnXkFtZTgwNTU5MjE1MDE@._V1_SX300.jpg', 'tt1335975', 'PG-13'),
+(12, '500 Days of Summer', 2009, 0, 'Documentary', 'N/A', 'N/A', 'http://ia.media-imdb.com/images/M/MV5BMTgyMTcyNDE1OF5BMl5BanBnXkFtZTgwODQ2Njk3MDE@._V1_SX300.jpg', 'tt3012116', 'N/A'),
+(13, '6th Sense', 2013, 3, 'Short, Horror', 'David Scullion', 'David Puckridge, Freddie Sandilands, Christopher Millward, Kitty Chapman', 'N/A', 'tt2955658', 'N/A'),
+(14, 'A Good Day to Die Hard', 2013, 98, 'Action, Crime, Thriller', 'John Moore', 'Bruce Willis, Jai Courtney, Sebastian Koch, Mary Elizabeth Winstead', 'http://ia.media-imdb.com/images/M/MV5BMTcwNzgyNzUzOV5BMl5BanBnXkFtZTcwMzAwOTA5OA@@._V1_SX300.jpg', 'tt1606378', 'R'),
+(15, 'Act of Valor', 2012, 110, 'Action, Thriller, War', 'Mike McCoy, Scott Waugh', 'Rorke Denver, Dave, Sonny, Weimy', 'http://ia.media-imdb.com/images/M/MV5BMTY3NDQxMDAzM15BMl5BanBnXkFtZTcwNzEyNjgzNw@@._V1_SX300.jpg', 'tt1591479', 'R'),
+(16, 'After Earth', 2013, 100, 'Action, Adventure, Sci-Fi', 'M. Night Shyamalan', 'Jaden Smith, Will Smith, Sophie Okonedo, Zoë Kravitz', 'http://ia.media-imdb.com/images/M/MV5BMTY3MzQyMjkwMl5BMl5BanBnXkFtZTcwMDk2OTE0OQ@@._V1_SX300.jpg', 'tt1815862', 'PG-13'),
+(17, 'Anchorman 2: The Legend Continues', 2013, 119, 'Comedy', 'Adam McKay', 'Will Ferrell, Steve Carell, Paul Rudd, David Koechner', 'http://ia.media-imdb.com/images/M/MV5BMjE5ODk0NjQzNV5BMl5BanBnXkFtZTgwODk4MDA1MDE@._V1_SX300.jpg', 'tt1229340', 'R'),
+(18, 'Anchorman: The Legend of Ron Burgundy', 2004, 94, 'Comedy', 'Adam McKay', 'Will Ferrell, Christina Applegate, Paul Rudd, Steve Carell', 'http://ia.media-imdb.com/images/M/MV5BMTQ2MzYwMzk5Ml5BMl5BanBnXkFtZTcwOTI4NzUyMw@@._V1_SX300.jpg', 'tt0357413', 'PG-13'),
+(19, 'Angels & Demons', 2009, 138, 'Mystery, Thriller', 'Ron Howard', 'Tom Hanks, Ewan McGregor, Ayelet Zurer, Stellan Skarsgård', 'http://ia.media-imdb.com/images/M/MV5BMjEzNzM2MjgxMF5BMl5BanBnXkFtZTcwNTQ1MTM0Mg@@._V1_SX300.jpg', 'tt0808151', 'PG-13'),
+(20, 'Argo', 2012, 120, 'Biography, Drama, History', 'Ben Affleck', 'Ben Affleck, Bryan Cranston, Alan Arkin, John Goodman', 'http://ia.media-imdb.com/images/M/MV5BMTc3MjI0MjM0NF5BMl5BanBnXkFtZTcwMTYxMTQ1OA@@._V1_SX300.jpg', 'tt1024648', 'R'),
+(21, 'Arthur', 2011, 110, 'Comedy, Romance', 'Jason Winer', 'Russell Brand, Helen Mirren, Greta Gerwig, Jennifer Garner', 'http://ia.media-imdb.com/images/M/MV5BMzMwMTUwMDkwOV5BMl5BanBnXkFtZTcwMjg1MDg0NA@@._V1_SX300.jpg', 'tt1334512', 'PG-13'),
+(22, 'Arthur Christmas', 2011, 97, 'Animation, Comedy, Drama', 'Sarah Smith, Barry Cook', 'James McAvoy, Hugh Laurie, Bill Nighy, Jim Broadbent', 'http://ia.media-imdb.com/images/M/MV5BMTYyMjMyMzEzMl5BMl5BanBnXkFtZTcwMDg4NTM5Ng@@._V1_SX300.jpg', 'tt1430607', 'PG'),
+(23, 'Assault on Wall Street', 2013, 99, 'Action, Drama, Thriller', 'Uwe Boll', 'Dominic Purcell, Erin Karpluk, Edward Furlong, John Heard', 'http://ia.media-imdb.com/images/M/MV5BNzY3ODI4MjkyOF5BMl5BanBnXkFtZTcwNzg3ODIzOQ@@._V1_SX300.jpg', 'tt2368553', 'R'),
+(24, 'Battle of the Year', 2013, 110, 'Music', 'Benson Lee', 'Josh Holloway, Laz Alonso, Josh Peck, Caity Lotz', 'http://ia.media-imdb.com/images/M/MV5BOTY2OTcyNzM3NF5BMl5BanBnXkFtZTgwNzgxMjkxMDE@._V1_SX300.jpg', 'tt1532958', 'PG-13'),
+(25, 'Blue Jasmine', 2013, 98, 'Comedy, Drama', 'Woody Allen', 'Cate Blanchett, Joy Carlin, Richard Conti, Glen Caspillo', 'http://ia.media-imdb.com/images/M/MV5BMTc0ODk5MzEyMV5BMl5BanBnXkFtZTcwMzI0MDY1OQ@@._V1_SX300.jpg', 'tt2334873', 'PG-13'),
+(26, 'Broken', 2012, 91, 'Drama', 'Rufus Norris', 'Charlie Booty, Lily James, Tim Roth, Eloise Laurence', 'http://ia.media-imdb.com/images/M/MV5BMTc3NTMzNDY4NV5BMl5BanBnXkFtZTgwMzQxNTkyMDE@._V1_SX300.jpg', 'tt1441940', 'N/A'),
+(27, 'Captain Phillips', 2013, 134, 'Biography, Drama, Thriller', 'Paul Greengrass', 'Tom Hanks, Catherine Keener, Barkhad Abdi, Barkhad Abdirahman', 'http://ia.media-imdb.com/images/M/MV5BMTQzNzExMDg3Ml5BMl5BanBnXkFtZTgwODU1NzEzMDE@._V1_SX300.jpg', 'tt1535109', 'PG-13'),
+(28, 'Charlie and the Chocolate Factory', 2005, 115, 'Adventure, Comedy, Family', 'Tim Burton', 'Johnny Depp, Freddie Highmore, David Kelly, Helena Bonham Carter', 'http://ia.media-imdb.com/images/M/MV5BNjcxMjg1Njg2NF5BMl5BanBnXkFtZTcwMjQ4NzMzMw@@._V1_SX300.jpg', 'tt0367594', 'PG'),
+(29, 'Contagion', 2011, 106, 'Drama, Sci-Fi, Thriller', 'Steven Soderbergh', 'Marion Cotillard, Matt Damon, Laurence Fishburne, Jude Law', 'http://ia.media-imdb.com/images/M/MV5BMTY3MDk5MDc3OV5BMl5BanBnXkFtZTcwNzAyNTg0Ng@@._V1_SX300.jpg', 'tt1598778', 'PG-13'),
+(30, 'Cop Out', 2010, 107, 'Action, Comedy, Crime', 'Kevin Smith', 'Bruce Willis, Tracy Morgan, Juan Carlos Hernández, Cory Fernandez', 'http://ia.media-imdb.com/images/M/MV5BMTk0NzcxMjYwNF5BMl5BanBnXkFtZTcwMTI4MTIxMw@@._V1_SX300.jpg', 'tt1385867', 'R'),
+(31, 'Cowboys & Aliens', 2011, 119, 'Action, Sci-Fi, Thriller', 'Jon Favreau', 'Daniel Craig, Abigail Spencer, Buck Taylor, Matthew Taylor', 'http://ia.media-imdb.com/images/M/MV5BMTM1MzkyNzQ3OV5BMl5BanBnXkFtZTcwMDk1NTg2NQ@@._V1_SX300.jpg', 'tt0409847', 'PG-13'),
+(32, 'Dark Shadows', 2012, 113, 'Comedy, Horror', 'Tim Burton', 'Johnny Depp, Michelle Pfeiffer, Helena Bonham Carter, Eva Green', 'http://ia.media-imdb.com/images/M/MV5BMjc0NzAyMzI1MF5BMl5BanBnXkFtZTcwMTE0NDQ1Nw@@._V1_SX300.jpg', 'tt1077368', 'PG-13'),
+(33, 'Date Night', 2010, 88, 'Comedy, Crime, Romance', 'Shawn Levy', 'Steve Carell, Tina Fey, Mark Wahlberg, Taraji P. Henson', 'http://ia.media-imdb.com/images/M/MV5BODgwMjM2ODE4M15BMl5BanBnXkFtZTcwMTU2MDcyMw@@._V1_SX300.jpg', 'tt1279935', 'PG-13'),
+(34, 'Death at a Funeral', 2007, 90, 'Comedy', 'Frank Oz', 'Matthew Macfadyen, Keeley Hawes, Andy Nyman, Ewen Bremner', 'http://ia.media-imdb.com/images/M/MV5BMTIwNjYyODU1NF5BMl5BanBnXkFtZTcwMDk4OTQ0MQ@@._V1_SX300.jpg', 'tt0795368', 'R'),
+(35, 'Death Race 2', 2010, 96, 'Action, Sci-Fi, Thriller', 'Roel Reiné', 'Luke Goss, Lauren Cohan, Sean Bean, Ving Rhames', 'http://ia.media-imdb.com/images/M/MV5BMTk0OTUxNTYxNF5BMl5BanBnXkFtZTcwMzA1MDIyNQ@@._V1_SX300.jpg', 'tt1500491', 'R'),
+(36, 'Delivery Man', 2013, 105, 'Comedy, Drama', 'Ken Scott', 'Vince Vaughn, Chris Pratt, Cobie Smulders, Andrzej Blumenfeld', 'http://ia.media-imdb.com/images/M/MV5BMjIxNjc2MzMzMl5BMl5BanBnXkFtZTgwMjA5NjM0MDE@._V1_SX300.jpg', 'tt2387559', 'PG-13'),
+(37, 'Despicable Me', 2010, 95, 'Animation, Comedy, Family', 'Pierre Coffin, Chris Renaud', 'Steve Carell, Jason Segel, Russell Brand, Julie Andrews', 'http://ia.media-imdb.com/images/M/MV5BMTY3NjY0MTQ0Nl5BMl5BanBnXkFtZTcwMzQ2MTc0Mw@@._V1_SX300.jpg', 'tt1323594', 'PG'),
+(38, 'Despicable Me 2', 2013, 98, 'Animation, Adventure, Comedy', 'Pierre Coffin, Chris Renaud', 'Steve Carell, Kristen Wiig, Benjamin Bratt, Miranda Cosgrove', 'http://ia.media-imdb.com/images/M/MV5BMjExNjAyNTcyMF5BMl5BanBnXkFtZTgwODQzMjQ3MDE@._V1_SX300.jpg', 'tt1690953', 'PG'),
+(40, 'Disconnect', 2012, 115, 'Drama, Thriller', 'Henry Alex Rubin', 'Jason Bateman, Hope Davis, Frank Grillo, Michael Nyqvist', 'http://ia.media-imdb.com/images/M/MV5BMjA2MTEzMDkyOF5BMl5BanBnXkFtZTcwNzc4NTgxOQ@@._V1_SX300.jpg', 'tt1433811', 'R'),
+(41, 'Django Unchained', 2012, 165, 'Western', 'Quentin Tarantino', 'Jamie Foxx, Christoph Waltz, Leonardo DiCaprio, Kerry Washington', 'http://ia.media-imdb.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_SX300.jpg', 'tt1853728', 'R'),
+(42, 'Don Jon', 2013, 90, 'Comedy, Drama, Romance', 'Joseph Gordon-Levitt', 'Joseph Gordon-Levitt, Scarlett Johansson, Julianne Moore, Tony Danza', 'http://ia.media-imdb.com/images/M/MV5BMTQxNTc3NDM2MF5BMl5BanBnXkFtZTcwNzQ5NTQ3OQ@@._V1._CR28,28.649993896484375,1271,1991.0000305175781_SX89_AL_.jpg_V1_SX300.jpg', 'tt2229499', 'R'),
+(43, 'Dragonball Evolution', 2009, 0, 'Action, Adventure, Drama', 'N/A', 'Erin Fitzgerald', 'http://ia.media-imdb.com/images/M/MV5BOTAyNTUxODgwNl5BMl5BanBnXkFtZTcwNDU3MDY0Mg@@._V1_SX300.jpg', 'tt1394192', 'N/A'),
+(44, 'Due Date', 2010, 95, 'Comedy', 'Todd Phillips', 'Robert Downey Jr., Zach Galifianakis, Michelle Monaghan, Jamie Foxx', 'http://ia.media-imdb.com/images/M/MV5BMTU5MTgxODM3Nl5BMl5BanBnXkFtZTcwMjMxNDEwNA@@._V1_SX300.jpg', 'tt1231583', 'R'),
+(45, 'Elysium', 2013, 109, 'Action, Drama, Sci-Fi', 'Neill Blomkamp', 'Matt Damon, Jodie Foster, Sharlto Copley, Alice Braga', 'http://ia.media-imdb.com/images/M/MV5BNDc2NjU0MTcwNV5BMl5BanBnXkFtZTcwMjg4MDg2OQ@@._V1_SX300.jpg', 'tt1535108', 'R'),
+(46, 'Ender''s Game', 2013, 114, 'Action, Sci-Fi', 'Gavin Hood', 'Asa Butterfield, Harrison Ford, Hailee Steinfeld, Abigail Breslin', 'http://ia.media-imdb.com/images/M/MV5BMjAzMzI5OTgzMl5BMl5BanBnXkFtZTgwMTU5MTAwMDE@._V1_SX300.jpg', 'tt1731141', 'PG-13'),
+(47, 'Epic', 2013, 102, 'Animation, Adventure, Family', 'Chris Wedge', 'Blake Anderson, Aziz Ansari, Allison Bills, Jim Conroy', 'http://ia.media-imdb.com/images/M/MV5BMTgyNDYwNzE5NV5BMl5BanBnXkFtZTcwMzUyODM5OA@@._V1_SX300.jpg', 'tt0848537', 'PG'),
+(48, 'Fantasia', 1940, 125, 'Animation, Family, Fantasy', 'Norman Ferguson, James Algar, Samuel Armstrong, Ford Beebe Jr., Jim Handley, T. Hee, Wilfred Jackson, Hamilton Luske, Bill Roberts, Paul Satterfield, Ben Sharpsteen', 'Leopold Stokowski, Deems Taylor', 'http://ia.media-imdb.com/images/M/MV5BMTM2Nzk5ODU5NF5BMl5BanBnXkFtZTcwMjQ1ODYxMQ@@._V1_SX300.jpg', 'tt0032455', 'G'),
+(49, 'Fast & Furious 6', 2013, 130, 'Action, Crime, Thriller', 'Justin Lin', 'Vin Diesel, Paul Walker, Dwayne Johnson, Jordana Brewster', 'http://ia.media-imdb.com/images/M/MV5BMTM3NTg2NDQzOF5BMl5BanBnXkFtZTcwNjc2NzQzOQ@@._V1_SX300.jpg', 'tt1905041', 'PG-13'),
+(50, 'Fast Five', 2011, 130, 'Action, Crime, Thriller', 'Justin Lin', 'Vin Diesel, Paul Walker, Jordana Brewster, Tyrese Gibson', 'http://ia.media-imdb.com/images/M/MV5BMTUxNTk5MTE0OF5BMl5BanBnXkFtZTcwMjA2NzY3NA@@._V1_SX300.jpg', 'tt1596343', 'PG-13'),
+(51, 'Fast Times at Ridgemont High', 1982, 90, 'Comedy, Drama, Romance', 'Amy Heckerling', 'Sean Penn, Jennifer Jason Leigh, Judge Reinhold, Robert Romanus', 'http://ia.media-imdb.com/images/M/MV5BMTU5MTM0OTExOF5BMl5BanBnXkFtZTcwNjgxMzYyMQ@@._V1_SX300.jpg', 'tt0083929', 'R'),
+(52, 'Footloose', 1984, 107, 'Drama, Music, Romance', 'Herbert Ross', 'Kevin Bacon, Lori Singer, John Lithgow, Dianne Wiest', 'http://ia.media-imdb.com/images/M/MV5BMTYwMzgzNDAzM15BMl5BanBnXkFtZTYwODY0NjU5._V1_SX300.jpg', 'tt0087277', 'R'),
+(53, 'Friends with Benefits', 2011, 109, 'Comedy, Romance', 'Will Gluck', 'Justin Timberlake, Mila Kunis, Patricia Clarkson, Jenna Elfman', 'http://ia.media-imdb.com/images/M/MV5BMTQ2MzQ0NTk4N15BMl5BanBnXkFtZTcwMDc2NDYzNQ@@._V1_SX300.jpg', 'tt1632708', 'R'),
+(54, 'Gangster Squad', 2013, 113, 'Action, Crime, Drama', 'Ruben Fleischer', 'Sean Penn, Holt McCallany, Wade Williams, James Landry Hébert', 'http://ia.media-imdb.com/images/M/MV5BMTcwMjAyMTUzMl5BMl5BanBnXkFtZTcwODgxNzk1OA@@._V1_SX300.jpg', 'tt1321870', 'R'),
+(55, 'Ghost Rider Spirit of Vengeance', 2012, 0, 'Documentary', 'N/A', 'N/A', 'http://ia.media-imdb.com/images/M/MV5BMTgyMTcyNDE1OF5BMl5BanBnXkFtZTgwODQ2Njk3MDE@._V1_SX300.jpg', 'tt3061254', 'N/A'),
+(56, 'Gone in 60 Seconds', 1974, 105, 'Action, Crime, Drama', 'H.B. Halicki', 'H.B. Halicki, Marion Busia, Jerry Daugirda, James McIntyre', 'http://ia.media-imdb.com/images/M/MV5BMjIxMzExMTI4OF5BMl5BanBnXkFtZTgwNzU5MjMxMDE@._V1_SX300.jpg', 'tt0071571', 'PG'),
+(57, 'Gravity', 2013, 91, 'Sci-Fi, Thriller', 'Alfonso Cuarón', 'Sandra Bullock, George Clooney, Ed Harris, Orto Ignatiussen', 'http://ia.media-imdb.com/images/M/MV5BNjE5MzYwMzYxMF5BMl5BanBnXkFtZTcwOTk4MTk0OQ@@._V1_SX300.jpg', 'tt1454468', 'PG-13'),
+(58, 'Green Lantern', 2011, 114, 'Action, Adventure, Sci-Fi', 'Martin Campbell', 'Ryan Reynolds, Blake Lively, Peter Sarsgaard, Mark Strong', 'http://ia.media-imdb.com/images/M/MV5BMTMyMTg3OTM5Ml5BMl5BanBnXkFtZTcwNzczMjEyNQ@@._V1_SX300.jpg', 'tt1133985', 'PG-13'),
+(59, 'Grown Ups 2', 2013, 101, 'Comedy', 'Dennis Dugan', 'Adam Sandler, Kevin James, Chris Rock, David Spade', 'http://ia.media-imdb.com/images/M/MV5BMTgwNTI2MDI0OF5BMl5BanBnXkFtZTcwMTk5MDg0OQ@@._V1_SX300.jpg', 'tt2191701', 'PG-13'),
+(60, 'Grown Ups', 2010, 102, 'Comedy', 'Dennis Dugan', 'Adam Sandler, Kevin James, Chris Rock, David Spade', 'http://ia.media-imdb.com/images/M/MV5BMjA0ODYwNzU5Nl5BMl5BanBnXkFtZTcwNTI1MTgxMw@@._V1_SX300.jpg', 'tt1375670', 'PG-13'),
+(61, 'Gulliver''s Travels', 2010, 85, 'Adventure, Comedy, Family', 'Rob Letterman', 'Jack Black, Jason Segel, Emily Blunt, Amanda Peet', 'http://ia.media-imdb.com/images/M/MV5BMTU0NTUwOTM3Nl5BMl5BanBnXkFtZTcwMDA3NjIwNA@@._V1_SX300.jpg', 'tt1320261', 'PG'),
+(62, 'Hit and Run', 2012, 100, 'Action, Comedy, Romance', 'David Palmer, Dax Shepard', 'Kristen Bell, Dax Shepard, Tom Arnold, Kristin Chenoweth', 'http://ia.media-imdb.com/images/M/MV5BMjExNTgzMTAzMV5BMl5BanBnXkFtZTcwMDA0ODkxOA@@._V1_SX300.jpg', 'tt2097307', 'R'),
+(63, 'Hitman', 2007, 100, 'Action, Crime, Drama', 'Xavier Gens', 'Timothy Olyphant, Dougray Scott, Olga Kurylenko, Robert Knepper', 'http://ia.media-imdb.com/images/M/MV5BMTI1MzE2Mjc4NV5BMl5BanBnXkFtZTYwMDMwMzM3._V1_SX300.jpg', 'tt0465494', 'R'),
+(64, 'Hugo', 2011, 126, 'Adventure, Drama, Family', 'Martin Scorsese', 'Ben Kingsley, Sacha Baron Cohen, Asa Butterfield, Chloë Grace Moretz', 'http://ia.media-imdb.com/images/M/MV5BMjAzNzk5MzgyNF5BMl5BanBnXkFtZTcwOTE4NDU5Ng@@._V1_SX300.jpg', 'tt0970179', 'PG'),
+(65, 'Hulk', 2003, 138, 'Action, Sci-Fi', 'Ang Lee', 'Eric Bana, Jennifer Connelly, Sam Elliott, Josh Lucas', 'http://ia.media-imdb.com/images/M/MV5BMTQxNzUxNTE4Nl5BMl5BanBnXkFtZTYwMjcyNTk5._V1_SX300.jpg', 'tt0286716', 'PG-13'),
+(66, 'Inception', 2010, 148, 'Action, Adventure, Mystery', 'Christopher Nolan', 'Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy', 'http://ia.media-imdb.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg', 'tt1375666', 'PG-13'),
+(67, 'Inside Job', 2010, 105, 'Documentary, Crime', 'Charles Ferguson', 'Matt Damon, William Ackman, Daniel Alpert, Jonathan Alpert', 'http://ia.media-imdb.com/images/M/MV5BMTQ3MjkyODA2Nl5BMl5BanBnXkFtZTcwNzQxMTU4Mw@@._V1_SX300.jpg', 'tt1645089', 'PG-13'),
+(68, 'Iron Man 2', 2010, 124, 'Action, Adventure, Sci-Fi', 'Jon Favreau, Kenneth Branagh', 'Robert Downey Jr., Gwyneth Paltrow, Don Cheadle, Scarlett Johansson', 'http://ia.media-imdb.com/images/M/MV5BMTM0MDgwNjMyMl5BMl5BanBnXkFtZTcwNTg3NzAzMw@@._V1_SX300.jpg', 'tt1228705', 'PG-13'),
+(69, 'Iron Man', 2008, 126, 'Action, Adventure, Sci-Fi', 'Jon Favreau', 'Robert Downey Jr., Terrence Howard, Jeff Bridges, Gwyneth Paltrow', 'http://ia.media-imdb.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX300.jpg', 'tt0371746', 'PG-13'),
+(70, 'Iron Sky', 2012, 93, 'Action, Comedy, Sci-Fi', 'Timo Vuorensola', 'Julia Dietze, Christopher Kirby, Götz Otto, Udo Kier', 'http://ia.media-imdb.com/images/M/MV5BMTM2MDg5MzgxNF5BMl5BanBnXkFtZTcwODUzNjMxOA@@._V1_SX300.jpg', 'tt1034314', 'R'),
+(71, 'Jack & Jill', 1999, 60, 'Drama, Comedy', 'N/A', 'Ivan Sergei, Justin Kirk, Simon Rex, Amanda Peet', 'http://ia.media-imdb.com/images/M/MV5BMTMxMTU3NjM0N15BMl5BanBnXkFtZTcwMjYxODY5Mw@@._V1_SX300.jpg', 'tt0207889', 'N/A'),
+(72, 'Jack Reacher', 2012, 130, 'Action, Crime, Thriller', 'Christopher McQuarrie', 'Tom Cruise, Rosamund Pike, Richard Jenkins, David Oyelowo', 'http://ia.media-imdb.com/images/M/MV5BMTM1NjUxMDI3OV5BMl5BanBnXkFtZTcwNjg1ODM3OA@@._V1_SX300.jpg', 'tt0790724', 'PG-13'),
+(73, 'Jobs', 2013, 128, 'Biography, Drama', 'Joshua Michael Stern', 'Ashton Kutcher, Dermot Mulroney, Josh Gad, Lukas Haas', 'http://ia.media-imdb.com/images/M/MV5BMTM5NTQ3MTYxN15BMl5BanBnXkFtZTcwODE2Nzk3OQ@@._V1_SX300.jpg', 'tt2357129', 'PG-13'),
+(74, 'Juno', 2007, 96, 'Comedy, Drama, Romance', 'Jason Reitman', 'Ellen Page, Michael Cera, Jennifer Garner, Jason Bateman', 'http://ia.media-imdb.com/images/M/MV5BMTgxMjgyMTcyNF5BMl5BanBnXkFtZTcwMDg1MTU1MQ@@._V1_SX300.jpg', 'tt0467406', 'PG-13'),
+(76, 'Kick Ass 2', 2013, 0, 'Talk-Show', 'Jamaal Stone', 'Michael Finn, Khalimah Gaston, Fady Kerko, Sarah Schoofs', 'N/A', 'tt2865266', 'N/A'),
+(77, 'Knight and Day', 2010, 109, 'Action, Comedy, Romance', 'James Mangold', 'Tom Cruise, Cameron Diaz, Peter Sarsgaard, Jordi Mollà', 'http://ia.media-imdb.com/images/M/MV5BMTM0Mzg0MzI3Ml5BMl5BanBnXkFtZTcwNjIyNzk1Mw@@._V1_SX300.jpg', 'tt1013743', 'PG-13'),
+(78, 'Leap Year', 2010, 100, 'Comedy, Romance', 'Anand Tucker', 'Amy Adams, Matthew Goode, Adam Scott, John Lithgow', 'http://ia.media-imdb.com/images/M/MV5BMTgzMTQ2MDQxMF5BMl5BanBnXkFtZTcwODEzOTg5Mg@@._V1_SX300.jpg', 'tt1216492', 'PG'),
+(79, 'Liar Liar', 1997, 86, 'Comedy, Drama, Fantasy', 'Tom Shadyac', 'Jim Carrey, Maura Tierney, Justin Cooper, Cary Elwes', 'http://ia.media-imdb.com/images/M/MV5BMjEzMzA3NzgwNF5BMl5BanBnXkFtZTcwNzQ4MDgyMQ@@._V1_SX300.jpg', 'tt0119528', 'PG-13'),
+(80, 'Life of Pi', 2012, 127, 'Adventure, Drama, Fantasy', 'Ang Lee', 'Suraj Sharma, Irrfan Khan, Ayush Tandon, Gautam Belur', 'http://ia.media-imdb.com/images/M/MV5BNTg2OTY2ODg5OF5BMl5BanBnXkFtZTcwODM5MTYxOA@@._V1_SX300.jpg', 'tt0454876', 'PG'),
+(81, 'Limitless', 2011, 105, 'Mystery, Sci-Fi, Thriller', 'Neil Burger', 'Bradley Cooper, Robert De Niro, Abbie Cornish, Andrew Howard', 'http://ia.media-imdb.com/images/M/MV5BMTY3NjczNzc5Nl5BMl5BanBnXkFtZTcwMzA2MzQyNA@@._V1_SX300.jpg', 'tt1219289', 'PG-13'),
+(82, 'Lone Survivor', 2013, 121, 'Action, Biography, Drama', 'Peter Berg', 'Mark Wahlberg, Taylor Kitsch, Emile Hirsch, Ben Foster', 'http://ia.media-imdb.com/images/M/MV5BMjA0NTgwOTk5Ml5BMl5BanBnXkFtZTcwMjE3NDc5OQ@@._V1_SX300.jpg', 'tt1091191', 'R'),
+(83, 'Love and Other Drugs', 2010, 0, 'Documentary', 'N/A', 'N/A', 'http://ia.media-imdb.com/images/M/MV5BMTgyMTcyNDE1OF5BMl5BanBnXkFtZTgwODQ2Njk3MDE@._V1_SX300.jpg', 'tt3022594', 'N/A'),
+(84, 'Magic Mike', 2012, 110, 'Comedy, Drama', 'Steven Soderbergh', 'Matthew McConaughey, Channing Tatum, Olivia Munn, Alex Pettyfer', 'http://ia.media-imdb.com/images/M/MV5BMTQzMDMzOTA5M15BMl5BanBnXkFtZTcwMjc4MTg4Nw@@._V1_SX300.jpg', 'tt1915581', 'R'),
+(85, 'Mean Girls', 2004, 97, 'Comedy', 'Mark Waters', 'Lindsay Lohan, Rachel McAdams, Tina Fey, Tim Meadows', 'http://ia.media-imdb.com/images/M/MV5BMjE1MDQ4MjI1OV5BMl5BanBnXkFtZTcwNzcwODAzMw@@._V1_SX300.jpg', 'tt0377092', 'PG-13'),
+(86, 'Men in Black III', 2012, 0, 'Documentary', 'N/A', 'N/A', 'http://ia.media-imdb.com/images/M/MV5BMTgyMTcyNDE1OF5BMl5BanBnXkFtZTgwODQ2Njk3MDE@._V1_SX300.jpg', 'tt3061346', 'N/A'),
+(87, 'Moneyball', 2011, 133, 'Biography, Drama, Sport', 'Bennett Miller', 'Brad Pitt, Jonah Hill, Philip Seymour Hoffman, Robin Wright', 'http://ia.media-imdb.com/images/M/MV5BMjAxOTU3Mzc1M15BMl5BanBnXkFtZTcwMzk1ODUzNg@@._V1_SX300.jpg', 'tt1210166', 'PG-13'),
+(88, 'Movie 43', 2013, 94, 'Comedy', 'Elizabeth Banks, Steven Brill, Steve Carr, Rusty Cundieff, James Duffy, Griffin Dunne, Peter Farrelly, Patrik Forsberg, Will Graham, James Gunn, Brett Ratner, Jonathan van Tulleken, Bob Odenkirk', 'Dennis Quaid, Greg Kinnear, Common, Charlie Saxton', 'http://ia.media-imdb.com/images/M/MV5BMTg4NzQ3NDM1Nl5BMl5BanBnXkFtZTcwNjEzMjM3OA@@._V1_SX300.jpg', 'tt1333125', 'R'),
+(89, 'Mr & Mrs Smith/The Honeymooners/Howl''s Moving Castle', 2006, 26, 'News', 'N/A', 'N/A', 'http://ia.media-imdb.com/images/M/MV5BMjExMjU1MTQ3Nl5BMl5BanBnXkFtZTgwNzQ2Njk3MDE@._V1_SX300.jpg', 'tt3090380', 'N/A'),
+(90, 'Mud', 2012, 130, 'Drama', 'Jeff Nichols', 'Matthew McConaughey, Reese Witherspoon, Tye Sheridan, Jacob Lofland', 'http://ia.media-imdb.com/images/M/MV5BMTU2MzcyODgyNV5BMl5BanBnXkFtZTcwNTc4MDYwOQ@@._V1_SX300.jpg', 'tt1935179', 'PG-13'),
+(91, 'Notorious', 1946, 101, 'Drama, Film-Noir, Romance', 'Alfred Hitchcock', 'Cary Grant, Ingrid Bergman, Claude Rains, Louis Calhern', 'http://ia.media-imdb.com/images/M/MV5BMTY3NTAwMjk5OV5BMl5BanBnXkFtZTgwNDU5OTQzMTE@._V1_SX300.jpg', 'tt0038787', 'Approved'),
+(92, 'Now You See Me', 2013, 115, 'Crime, Mystery, Thriller', 'Louis Leterrier', 'Jesse Eisenberg, Mark Ruffalo, Woody Harrelson, Isla Fisher', 'http://ia.media-imdb.com/images/M/MV5BMTY0NDY3MDMxN15BMl5BanBnXkFtZTcwOTM5NzMzOQ@@._V1_SX300.jpg', 'tt1670345', 'PG-13'),
+(93, 'Oblivion', 2013, 124, 'Action, Adventure, Mystery', 'Joseph Kosinski', 'Tom Cruise, Morgan Freeman, Olga Kurylenko, Andrea Riseborough', 'http://ia.media-imdb.com/images/M/MV5BMTQwMDY0MTA4MF5BMl5BanBnXkFtZTcwNzI3MDgxOQ@@._V1_SX300.jpg', 'tt1483013', 'PG-13'),
+(94, 'Olympus Has Fallen', 2013, 119, 'Action, Thriller', 'Antoine Fuqua', 'Gerard Butler, Aaron Eckhart, Finley Jacobsen, Dylan McDermott', 'http://ia.media-imdb.com/images/M/MV5BMTkxNjIyNjE5OF5BMl5BanBnXkFtZTcwMTI3NzkxOQ@@._V1_SX300.jpg', 'tt2302755', 'R'),
+(95, 'Out of the Furnace', 2013, 116, 'Crime, Drama, Thriller', 'Scott Cooper', 'Woody Harrelson, Dendrie Taylor, Carl Ciarfalio, Nancy Mosser', 'http://ia.media-imdb.com/images/M/MV5BMTc2MTQ4MDU4NV5BMl5BanBnXkFtZTgwOTU1ODgzMDE@._V1_SX300.jpg', 'tt1206543', 'R'),
+(96, 'Pacific Rim', 2013, 132, 'Action, Adventure, Sci-Fi', 'Guillermo del Toro', 'Charlie Hunnam, Diego Klattenhoff, Idris Elba, Rinko Kikuchi', 'http://ia.media-imdb.com/images/M/MV5BMTY3MTI5NjQ4Nl5BMl5BanBnXkFtZTcwOTU1OTU0OQ@@._V1_SX300.jpg', 'tt1663662', 'PG-13'),
+(97, 'Pain & Gain', 2013, 129, 'Action, Comedy, Crime', 'Michael Bay', 'Mark Wahlberg, Dwayne Johnson, Anthony Mackie, Tony Shalhoub', 'http://ia.media-imdb.com/images/M/MV5BMTU0NDE5NTU0OV5BMl5BanBnXkFtZTcwMzI1OTMzOQ@@._V1_SX300.jpg', 'tt1980209', 'R'),
+(98, 'Parental Guidance', 2012, 105, 'Comedy, Family', 'Andy Fickman', 'Billy Crystal, Bette Midler, Marisa Tomei, Tom Everett Scott', 'http://ia.media-imdb.com/images/M/MV5BMzkyNDExOTA1Nl5BMl5BanBnXkFtZTcwNjgzODE4OA@@._V1_SX300.jpg', 'tt1047540', 'PG'),
+(99, 'Parker', 2013, 118, 'Action, Crime, Thriller', 'Taylor Hackford', 'Jason Statham, Jennifer Lopez, Michael Chiklis, Wendell Pierce', 'http://ia.media-imdb.com/images/M/MV5BMTk4MzM2NTQ1Nl5BMl5BanBnXkFtZTcwODIyODY1OA@@._V1_SX300.jpg', 'tt1904996', 'R'),
+(100, 'Percy Jackson Sea of Monsters', 2013, 0, 'Documentary', 'N/A', 'N/A', 'N/A', 'tt3776728', 'N/A'),
+(101, 'Premium Rush', 2012, 91, 'Action, Crime, Thriller', 'David Koepp', 'Joseph Gordon-Levitt, Dania Ramirez, Sean Kennedy, Kym Perfetto', 'http://ia.media-imdb.com/images/M/MV5BNzkxNjAwMDkwOF5BMl5BanBnXkFtZTcwMTQ1NDkwOA@@._V1_SX300.jpg', 'tt1547234', 'PG-13'),
+(102, 'Prisoners', 2013, 153, 'Crime, Drama, Thriller', 'Denis Villeneuve', 'Hugh Jackman, Jake Gyllenhaal, Viola Davis, Maria Bello', 'http://ia.media-imdb.com/images/M/MV5BMTg0NTIzMjQ1NV5BMl5BanBnXkFtZTcwNDc3MzM5OQ@@._V1_SX300.jpg', 'tt1392214', 'R'),
+(103, 'Project X', 2012, 88, 'Comedy, Crime', 'Nima Nourizadeh', 'Thomas Mann, Oliver Cooper, Jonathan Daniel Brown, Dax Flame', 'http://ia.media-imdb.com/images/M/MV5BMTc1MTk0Njg4OF5BMl5BanBnXkFtZTcwODc0ODkyNw@@._V1_SX300.jpg', 'tt1636826', 'R'),
+(104, 'Real Steel', 2011, 127, 'Action, Drama, Sci-Fi', 'Shawn Levy', 'Hugh Jackman, Dakota Goyo, Evangeline Lilly, Anthony Mackie', 'http://ia.media-imdb.com/images/M/MV5BMjEzMzEzNjg0N15BMl5BanBnXkFtZTcwMzg4NDk0Ng@@._V1_SX300.jpg', 'tt0433035', 'PG-13'),
+(105, 'RED 2', 2013, 116, 'Action, Comedy, Crime', 'Dean Parisot', 'Bruce Willis, John Malkovich, Mary-Louise Parker, Helen Mirren', 'http://ia.media-imdb.com/images/M/MV5BMjI2ODQ4ODY3Nl5BMl5BanBnXkFtZTcwNTc2NzE1OQ@@._V1_SX300.jpg', 'tt1821694', 'PG-13'),
+(106, 'Riddick', 2013, 119, 'Action, Sci-Fi, Thriller', 'David Twohy', 'Vin Diesel, Jordi Mollà, Matt Nable, Katee Sackhoff', 'http://ia.media-imdb.com/images/M/MV5BMTk5NzYwMzQ4MV5BMl5BanBnXkFtZTcwMjE5MTI1OQ@@._V1_SX300.jpg', 'tt1411250', 'R'),
+(107, 'Ride Along', 2014, 99, 'Action, Comedy', 'Tim Story', 'Ice Cube, Kevin Hart, John Leguizamo, Bruce McGill', 'http://ia.media-imdb.com/images/M/MV5BNjU4NzYzOTY1MF5BMl5BanBnXkFtZTgwMTAyNTc1MDE@._V1_SX300.jpg', 'tt1408253', 'PG-13'),
+(108, 'Roadtrip', 2010, 43, 'Drama, Family, Reality-TV', 'N/A', 'N/A', 'N/A', 'tt1757128', 'TV-PG'),
+(109, 'Rock of Ages', 2012, 123, 'Comedy, Drama, Musical', 'Adam Shankman', 'Julianne Hough, Dakota Sage Grant, Matthew Rush Sullivan, Diego Boneta', 'http://ia.media-imdb.com/images/M/MV5BMTg2NDQyODAzNF5BMl5BanBnXkFtZTcwMTg5MDA3Nw@@._V1_SX300.jpg', 'tt1336608', 'PG-13'),
+(110, 'Rush', 2013, 123, 'Action, Biography, Drama', 'Ron Howard', 'Chris Hemsworth, Daniel Brühl, Olivia Wilde, Alexandra Maria Lara', 'http://ia.media-imdb.com/images/M/MV5BMTQyMDE0MTY0OV5BMl5BanBnXkFtZTcwMjI2OTI0OQ@@._V1_SX300.jpg', 'tt1979320', 'R'),
+(111, 'Salt', 2010, 100, 'Action, Crime, Mystery', 'Phillip Noyce', 'Angelina Jolie, Liev Schreiber, Chiwetel Ejiofor, Daniel Olbrychski', 'http://ia.media-imdb.com/images/M/MV5BMjIyODA2NDg4NV5BMl5BanBnXkFtZTcwMjg4NDAwMw@@._V1_SX300.jpg', 'tt0944835', 'PG-13'),
+(112, 'Scary Movie', 2000, 88, 'Comedy', 'Keenen Ivory Wayans', 'Carmen Electra, Dave Sheridan, Frank B. Moore, Giacomo Baessato', 'http://ia.media-imdb.com/images/M/MV5BMTYzMTI3NjQzM15BMl5BanBnXkFtZTcwOTkzMzMyMQ@@._V1_SX300.jpg', 'tt0175142', 'R'),
+(113, 'Scenic Route', 2013, 82, 'Comedy, Drama, Thriller', 'Kevin Goetz, Michael Goetz', 'Josh Duhamel, Dan Fogler, Peter Michael Goetz, Christie Burson', 'http://ia.media-imdb.com/images/M/MV5BMjAyNjIyOTU0M15BMl5BanBnXkFtZTcwNTUwOTI2OQ@@._V1_SX300.jpg', 'tt2012011', 'R'),
+(114, 'Silver Linings Playbook', 2012, 122, 'Comedy, Drama, Romance', 'David O. Russell', 'Bradley Cooper, Jennifer Lawrence, Robert De Niro, Jacki Weaver', 'http://ia.media-imdb.com/images/M/MV5BMTM2MTI5NzA3MF5BMl5BanBnXkFtZTcwODExNTc0OA@@._V1_SX300.jpg', 'tt1045658', 'R'),
+(115, 'Source Code', 2011, 93, 'Mystery, Sci-Fi, Thriller', 'Duncan Jones', 'Jake Gyllenhaal, Michelle Monaghan, Vera Farmiga, Jeffrey Wright', 'http://ia.media-imdb.com/images/M/MV5BMTY0MTc3MzMzNV5BMl5BanBnXkFtZTcwNDE4MjE0NA@@._V1_SX300.jpg', 'tt0945513', 'PG-13'),
+(116, 'Star Trek Into Darkness', 2013, 132, 'Action, Adventure, Sci-Fi', 'J.J. Abrams', 'Chris Pine, Zachary Quinto, Zoe Saldana, Karl Urban', 'http://ia.media-imdb.com/images/M/MV5BMTk2NzczOTgxNF5BMl5BanBnXkFtZTcwODQ5ODczOQ@@._V1_SX300.jpg', 'tt1408101', 'PG-13'),
+(117, 'Step Up Revolution', 2012, 99, 'Drama, Music, Romance', 'Scott Speer', 'Cleopatra Coleman, Ryan Guzman, Misha Gabriel Hamilton, Michael ''Xeno'' Langebeck', 'http://ia.media-imdb.com/images/M/MV5BMjg1NjgyOTM2OF5BMl5BanBnXkFtZTcwMDIxMDE2Nw@@._V1_SX300.jpg', 'tt1800741', 'PG-13'),
+(118, 'Ted', 2012, 106, 'Comedy, Fantasy', 'Seth MacFarlane', 'Mark Wahlberg, Mila Kunis, Seth MacFarlane, Joel McHale', 'http://ia.media-imdb.com/images/M/MV5BMTQ1OTU0ODcxMV5BMl5BanBnXkFtZTcwOTMxNTUwOA@@._V1_SX300.jpg', 'tt1637725', 'R'),
+(119, 'The A Team', 2010, 0, 'N/A', 'Brian Katkin', 'N/A', 'N/A', 'tt1670904', 'N/A'),
+(120, 'The Adventures of Tintin', 2011, 107, 'Animation, Action, Adventure', 'Steven Spielberg', 'Jamie Bell, Andy Serkis, Daniel Craig, Nick Frost', 'http://ia.media-imdb.com/images/M/MV5BNDE5MDExNTQ1OF5BMl5BanBnXkFtZTcwMDIxMTM5Ng@@._V1_SX300.jpg', 'tt0983193', 'PG'),
+(121, 'The Amazing Spiderman T4 Premiere Special', 2012, 0, 'Documentary', 'Steve Kemsley, Steven Vinacour', 'Nick Grimshaw, Julio Leal', 'N/A', 'tt2233044', 'N/A'),
+(122, 'The Avengers', 2012, 143, 'Action, Adventure, Sci-Fi', 'Joss Whedon', 'Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth', 'http://ia.media-imdb.com/images/M/MV5BMTk2NTI1MTU4N15BMl5BanBnXkFtZTcwODg0OTY0Nw@@._V1_SX300.jpg', 'tt0848228', 'PG-13'),
+(123, 'The Bling Ring', 2013, 90, 'Biography, Crime, Drama', 'Sofia Coppola', 'Katie Chang, Israel Broussard, Emma Watson, Claire Julien', 'http://ia.media-imdb.com/images/M/MV5BMTQzMTgwMzQxN15BMl5BanBnXkFtZTcwOTcwNTY0OQ@@._V1_SX300.jpg', 'tt2132285', 'R'),
+(124, 'The Bourne Legacy', 2012, 135, 'Action, Adventure, Mystery', 'Tony Gilroy', 'Jeremy Renner, Scott Glenn, Stacy Keach, Edward Norton', 'http://ia.media-imdb.com/images/M/MV5BMTc4Njk3MDM1Nl5BMl5BanBnXkFtZTcwODgyOTMxOA@@._V1_SX300.jpg', 'tt1194173', 'PG-13'),
+(125, 'The Bourne Ultimatum', 2007, 115, 'Action, Crime, Thriller', 'Paul Greengrass', 'Matt Damon, Julia Stiles, David Strathairn, Scott Glenn', 'http://ia.media-imdb.com/images/M/MV5BMTgzNjMwOTM3N15BMl5BanBnXkFtZTcwMzA5MDY0MQ@@._V1_SX300.jpg', 'tt0440963', 'PG-13'),
+(126, 'The Butler', 1916, 0, 'Comedy, Short', 'Edwin McKim', 'Davy Don, Florence Williams, Patsy De Forest, George Egan', 'N/A', 'tt0204178', 'N/A'),
+(127, 'The Campaign', 2012, 85, 'Comedy', 'Jay Roach', 'Will Ferrell, Zach Galifianakis, Jason Sudeikis, Dylan McDermott', 'http://ia.media-imdb.com/images/M/MV5BMTY0NjI3MzM2Nl5BMl5BanBnXkFtZTcwNDgxNjA5Nw@@._V1_SX300.jpg', 'tt1790886', 'R'),
+(129, 'The Da Vinci Code', 2006, 149, 'Mystery, Thriller', 'Ron Howard', 'Tom Hanks, Audrey Tautou, Ian McKellen, Jean Reno', 'http://ia.media-imdb.com/images/M/MV5BMjIxMjQyMTc3Nl5BMl5BanBnXkFtZTcwMTA1MDUzMw@@._V1_SX300.jpg', 'tt0382625', 'PG-13'),
+(130, 'The Dark Knight Rises', 2012, 165, 'Action, Crime, Thriller', 'Christopher Nolan', 'Christian Bale, Gary Oldman, Tom Hardy, Joseph Gordon-Levitt', 'http://ia.media-imdb.com/images/M/MV5BMTk4ODQzNDY3Ml5BMl5BanBnXkFtZTcwODA0NTM4Nw@@._V1_SX300.jpg', 'tt1345836', 'PG-13'),
+(131, 'The Dictator', 2012, 83, 'Comedy', 'Larry Charles', 'Sacha Baron Cohen, Sayed Badreya, Rocky Citron, Liam Campora', 'http://ia.media-imdb.com/images/M/MV5BMjA4NjEyOTc4NV5BMl5BanBnXkFtZTcwODYzMjk2Nw@@._V1_SX300.jpg', 'tt1645170', 'R'),
+(132, 'The Family', 2013, 111, 'Comedy, Crime, Thriller', 'Luc Besson', 'Robert De Niro, Michelle Pfeiffer, Dianna Agron, John D''Leo', 'http://ia.media-imdb.com/images/M/MV5BMjE2MzI0MzkyNV5BMl5BanBnXkFtZTcwMjQ2MDM2OQ@@._V1_SX300.jpg', 'tt2404311', 'R'),
+(133, 'The Girl with the Dragon Tattoo', 2011, 158, 'Crime, Drama, Mystery', 'David Fincher', 'Daniel Craig, Rooney Mara, Christopher Plummer, Stellan Skarsgård', 'http://ia.media-imdb.com/images/M/MV5BMTczNDk4NTQ0OV5BMl5BanBnXkFtZTcwNDAxMDgxNw@@._V1_SX300.jpg', 'tt1568346', 'R'),
+(134, 'The Great Gatsby', 2013, 143, 'Drama, Romance', 'Baz Luhrmann', 'Lisa Adam, Frank Aldridge, Amitabh Bachchan, Steve Bisley', 'http://ia.media-imdb.com/images/M/MV5BMTkxNTk1ODcxNl5BMl5BanBnXkFtZTcwMDI1OTMzOQ@@._V1_SX300.jpg', 'tt1343092', 'PG-13'),
+(135, 'The Guard', 2011, 96, 'Comedy, Crime, Thriller', 'John Michael McDonagh', 'Ronan Collins, Paraic Nialand, John Patrick Beirne, Liam O''Conghaile', 'http://ia.media-imdb.com/images/M/MV5BMTY2ODkzMDgwM15BMl5BanBnXkFtZTcwMDA1Mjg1OA@@._V1_SX300.jpg', 'tt1540133', 'R'),
+(136, 'The Hangover', 2009, 100, 'Comedy', 'Todd Phillips', 'Bradley Cooper, Ed Helms, Zach Galifianakis, Justin Bartha', 'http://ia.media-imdb.com/images/M/MV5BMTU1MDA1MTYwMF5BMl5BanBnXkFtZTcwMDcxMzA1Mg@@._V1_SX300.jpg', 'tt1119646', 'R'),
+(137, 'The Heat', 2013, 117, 'Action, Comedy, Crime', 'Paul Feig', 'Sandra Bullock, Melissa McCarthy, Demian Bichir, Marlon Wayans', 'http://ia.media-imdb.com/images/M/MV5BMjA2MDQ2ODM3MV5BMl5BanBnXkFtZTcwNDUzMTQ3OQ@@._V1_SX300.jpg', 'tt2404463', 'R'),
+(139, 'The Hunger Games', 2012, 142, 'Adventure, Sci-Fi', 'Gary Ross', 'Stanley Tucci, Wes Bentley, Jennifer Lawrence, Willow Shields', 'http://ia.media-imdb.com/images/M/MV5BMjA4NDg3NzYxMF5BMl5BanBnXkFtZTcwNTgyNzkyNw@@._V1_SX300.jpg', 'tt1392170', 'PG-13'),
+(140, 'The Iceman', 2012, 106, 'Biography, Crime, Drama', 'Ariel Vromen', 'Michael Shannon, Winona Ryder, Chris Evans, Ray Liotta', 'http://ia.media-imdb.com/images/M/MV5BNDQyMjM5MTc2OF5BMl5BanBnXkFtZTgwMzg1NTMxMjE@._V1_SX300.jpg', 'tt1491044', 'R'),
+(141, 'The Incredible Hulk', 2008, 112, 'Action, Sci-Fi, Thriller', 'Louis Leterrier', 'Edward Norton, Liv Tyler, Tim Roth, William Hurt', 'http://ia.media-imdb.com/images/M/MV5BMTUyNzk3MjA1OF5BMl5BanBnXkFtZTcwMTE1Njg2MQ@@._V1_SX300.jpg', 'tt0800080', 'PG-13'),
+(142, 'The Internship', 2013, 119, 'Comedy', 'Shawn Levy', 'Vince Vaughn, Owen Wilson, Rose Byrne, Aasif Mandvi', 'http://ia.media-imdb.com/images/M/MV5BMjM1MzczMDgwOV5BMl5BanBnXkFtZTcwMDM4NjM2OQ@@._V1_SX300.jpg', 'tt2234155', 'PG-13'),
+(143, 'The Last Airbender', 2010, 103, 'Action, Adventure, Family', 'M. Night Shyamalan', 'Noah Ringer, Dev Patel, Nicola Peltz, Jackson Rathbone', 'http://ia.media-imdb.com/images/M/MV5BMTM1NjE0NDA0MV5BMl5BanBnXkFtZTcwODE4NDg1Mw@@._V1_SX300.jpg', 'tt0938283', 'PG'),
+(144, 'The Last Stand', 2013, 107, 'Action, Crime, Thriller', 'Kim Jee-woon', 'Arron Shiver, Arnold Schwarzenegger, Forest Whitaker, Titos Menchaca', 'http://ia.media-imdb.com/images/M/MV5BODc4NjI0OTYwNl5BMl5BanBnXkFtZTcwOTYwODQ3OA@@._V1_SX300.jpg', 'tt1549920', 'R'),
+(145, 'The Lone Ranger', 2013, 149, 'Action, Adventure, Western', 'Gore Verbinski', 'Johnny Depp, Armie Hammer, William Fichtner, Tom Wilkinson', 'http://ia.media-imdb.com/images/M/MV5BMjI3Mjk5MTUxOV5BMl5BanBnXkFtZTcwNTMyNzY3OQ@@._V1_SX300.jpg', 'tt1210819', 'PG-13'),
+(146, 'The Notebook', 2004, 123, 'Drama, Romance', 'Nick Cassavetes', 'Tim Ivey, Gena Rowlands, Starletta DuPois, James Garner', 'http://ia.media-imdb.com/images/M/MV5BMTk3OTM5Njg5M15BMl5BanBnXkFtZTYwMzA0ODI3._V1_SX300.jpg', 'tt0332280', 'PG-13'),
+(147, 'The Odyssey', 1997, 176, 'Adventure, Fantasy, Drama', 'N/A', 'Armand Assante, Greta Scacchi, Isabella Rossellini, Bernadette Peters', 'http://ia.media-imdb.com/images/M/MV5BMjYyNTA5OTA2Nl5BMl5BanBnXkFtZTcwMDQ2MzQyMQ@@._V1_SX300.jpg', 'tt0118414', 'PG-13'),
+(148, 'The Other Guys', 2010, 107, 'Action, Comedy, Crime', 'Adam McKay', 'Will Ferrell, Derek Jeter, Mark Wahlberg, Eva Mendes', 'http://ia.media-imdb.com/images/M/MV5BMTc0NDQzNTA2Ml5BMl5BanBnXkFtZTcwNzI2OTQzMw@@._V1_SX300.jpg', 'tt1386588', 'PG-13'),
+(149, 'The Outsider', 2002, 119, 'Drama, Romance, Western', 'Randa Haines', 'Tim Daly, Naomi Watts, Keith Carradine, David Carradine', 'http://ia.media-imdb.com/images/M/MV5BMTIzMjczMjg3M15BMl5BanBnXkFtZTcwODkxMDk0MQ@@._V1_SX300.jpg', 'tt0289374', 'R'),
+(150, 'The Passion of the Christ', 2004, 127, 'Drama', 'Mel Gibson', 'Jim Caviezel, Maia Morgenstern, Christo Jivkov, Francesco De Vito', 'http://ia.media-imdb.com/images/M/MV5BMTY2NDY5NDAwMV5BMl5BanBnXkFtZTcwMTcwMDUyMQ@@._V1_SX300.jpg', 'tt0335345', 'R'),
+(151, 'The Perfect Score', 2004, 93, 'Comedy, Crime', 'Brian Robbins', 'Chris Evans, Bryan Greenberg, Scarlett Johansson, Leonardo Nam', 'http://ia.media-imdb.com/images/M/MV5BMTU1NTA2MTY0MV5BMl5BanBnXkFtZTYwOTgxNjk5._V1_SX300.jpg', 'tt0314498', 'PG-13'),
+(152, 'The Place Beyond the Pines', 2012, 140, 'Crime, Drama', 'Derek Cianfrance', 'Ryan Gosling, Craig Van Hook, Eva Mendes, Olga Merediz', 'http://ia.media-imdb.com/images/M/MV5BMjc1OTEwNjU4N15BMl5BanBnXkFtZTcwNzUzNDIwOQ@@._V1_SX300.jpg', 'tt1817273', 'R'),
+(153, 'The Proposal', 2009, 108, 'Comedy, Drama, Romance', 'Anne Fletcher', 'Sandra Bullock, Ryan Reynolds, Mary Steenburgen, Craig T. Nelson', 'http://ia.media-imdb.com/images/M/MV5BMTU1MzY1ODIyNV5BMl5BanBnXkFtZTcwNDU4NTE3Mg@@._V1_SX300.jpg', 'tt1041829', 'PG-13'),
+(154, 'The Secret Life of Walter Mitty', 2013, 114, 'Adventure, Comedy, Drama', 'Ben Stiller', 'Ben Stiller, Kristen Wiig, Jon Daly, Kathryn Hahn', 'http://ia.media-imdb.com/images/M/MV5BODYwNDYxNDk1Nl5BMl5BanBnXkFtZTgwOTAwMTk2MDE@._V1_SX300.jpg', 'tt0359950', 'PG'),
+(155, 'The Social Network', 2010, 120, 'Biography, Drama', 'David Fincher', 'Jesse Eisenberg, Rooney Mara, Bryan Barter, Dustin Fitzsimons', 'http://ia.media-imdb.com/images/M/MV5BMTM2ODk0NDAwMF5BMl5BanBnXkFtZTcwNTM1MDc2Mw@@._V1_SX300.jpg', 'tt1285016', 'PG-13'),
+(156, 'The Three Stooges', 2012, 92, 'Comedy', 'Bobby Farrelly, Peter Farrelly', 'Sean Hayes, Will Sasso, Chris Diamantopoulos, Jane Lynch', 'http://ia.media-imdb.com/images/M/MV5BMTQwMzYwNjQ3OF5BMl5BanBnXkFtZTcwNzczNDMxNw@@._V1_SX300.jpg', 'tt0383010', 'PG'),
+(157, 'The Tourist', 2010, 103, 'Action, Romance, Thriller', 'Florian Henckel von Donnersmarck', 'Johnny Depp, Angelina Jolie, Paul Bettany, Timothy Dalton', 'http://ia.media-imdb.com/images/M/MV5BMTMyMzc3OTkwMV5BMl5BanBnXkFtZTcwMjc0MTgwNA@@._V1_SX300.jpg', 'tt1243957', 'PG-13'),
+(158, 'The Town', 2010, 125, 'Crime, Drama, Thriller', 'Ben Affleck', 'Ben Affleck, Rebecca Hall, Jon Hamm, Jeremy Renner', 'http://ia.media-imdb.com/images/M/MV5BMTcyNzcxODg3Nl5BMl5BanBnXkFtZTcwMTUyNjQ3Mw@@._V1_SX300.jpg', 'tt0840361', 'R'),
+(159, 'The Wolf of Wall Street', 2013, 180, 'Biography, Comedy, Crime', 'Martin Scorsese', 'Leonardo DiCaprio, Jonah Hill, Margot Robbie, Matthew McConaughey', 'http://ia.media-imdb.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_SX300.jpg', 'tt0993846', 'R'),
+(160, 'The Wolverine', 2013, 126, 'Action, Adventure, Sci-Fi', 'James Mangold', 'Hugh Jackman, Tao Okamoto, Rila Fukushima, Hiroyuki Sanada', 'http://ia.media-imdb.com/images/M/MV5BNzg1MDQxMTQ2OF5BMl5BanBnXkFtZTcwMTk3MjAzOQ@@._V1_SX300.jpg', 'tt1430132', 'PG-13'),
+(161, 'This Is the End', 2013, 107, 'Comedy, Fantasy', 'Evan Goldberg, Seth Rogen', 'James Franco, Jonah Hill, Seth Rogen, Jay Baruchel', 'http://ia.media-imdb.com/images/M/MV5BMTQxODE3NjM1Ml5BMl5BanBnXkFtZTcwMzkzNjc4OA@@._V1_SX300.jpg', 'tt1245492', 'R'),
+(162, 'Thor the Dark World', 2013, 30, 'Family, Comedy', 'N/A', 'Drew Osborne', 'N/A', 'tt3281468', 'N/A'),
+(163, 'Total Recall', 1990, 113, 'Action, Adventure, Sci-Fi', 'Paul Verhoeven', 'Arnold Schwarzenegger, Rachel Ticotin, Sharon Stone, Ronny Cox', 'http://ia.media-imdb.com/images/M/MV5BMTc2MTU4ODI5MF5BMl5BanBnXkFtZTcwODI2MzAyOA@@._V1_SX300.jpg', 'tt0100802', 'R'),
+(164, 'Tron Legacy', 2011, 0, 'Action, Adventure, Sci-Fi', 'N/A', 'N/A', 'N/A', 'tt1980294', 'N/A'),
+(165, 'Troy', 2004, 163, 'Adventure', 'Wolfgang Petersen', 'Julian Glover, Brian Cox, Nathan Jones, Adoni Maropis', 'http://ia.media-imdb.com/images/M/MV5BMTk5MzU1MDMwMF5BMl5BanBnXkFtZTcwNjczODMzMw@@._V1_SX300.jpg', 'tt0332452', 'R'),
+(166, 'Tuesdays with Morrie', 1999, 89, 'Biography, Drama', 'Mick Jackson', 'Jack Lemmon, Hank Azaria, Wendy Moniz, Caroline Aaron', 'http://ia.media-imdb.com/images/M/MV5BMTczMTE0MjQ2MF5BMl5BanBnXkFtZTcwNTQ1MDQyMQ@@._V1_SX300.jpg', 'tt0207805', 'N/A'),
+(167, 'V for Vendetta', 2005, 132, 'Action, Drama, Sci-Fi', 'James McTeigue', 'Natalie Portman, Hugo Weaving, Stephen Rea, Stephen Fry', 'http://ia.media-imdb.com/images/M/MV5BOTI5ODc3NzExNV5BMl5BanBnXkFtZTcwNzYxNzQzMw@@._V1_SX300.jpg', 'tt0434409', 'R'),
+(168, 'Van Wilder: Party Liaison', 2002, 92, 'Comedy, Romance', 'Walt Becker', 'Ryan Reynolds, Tara Reid, Tim Matheson, Kal Penn', 'http://ia.media-imdb.com/images/M/MV5BMTcxMjYxNjE5NV5BMl5BanBnXkFtZTcwNDE3MzgzMQ@@._V1_SX300.jpg', 'tt0283111', 'R'),
+(169, 'Walking with Dinosaurs 3D', 2013, 87, 'Animation, Adventure, Family', 'Barry Cook, Neil Nightingale', 'Charlie Rowe, Karl Urban, Angourie Rice, John Leguizamo', 'http://ia.media-imdb.com/images/M/MV5BMjE2OTc2MTk1Nl5BMl5BanBnXkFtZTgwNDg5NDU1MDE@._V1_SX300.jpg', 'tt1762399', 'PG'),
+(170, 'War Horse', 2011, 146, 'Drama, War', 'Steven Spielberg', 'Jeremy Irvine, Peter Mullan, Emily Watson, Niels Arestrup', 'http://ia.media-imdb.com/images/M/MV5BMjExNzkxOTYyNl5BMl5BanBnXkFtZTcwODA0MjU4Ng@@._V1_SX300.jpg', 'tt1568911', 'PG-13'),
+(171, 'We Are Legion: The Story of the Hacktivists', 2012, 93, 'Documentary', 'Brian Knappenberger', 'Anon2World, Anonyops, Julian Assange, Aaron Barr', 'http://ia.media-imdb.com/images/M/MV5BMzU4NjU1NDQwMF5BMl5BanBnXkFtZTcwNDg4NjI0OA@@._V1_SX300.jpg', 'tt2177843', 'N/A'),
+(172, 'We''re the Millers', 2013, 110, 'Comedy', 'Rawson Marshall Thurber', 'Jennifer Aniston, Jason Sudeikis, Emma Roberts, Will Poulter', 'http://ia.media-imdb.com/images/M/MV5BMjA5Njc0NDUxNV5BMl5BanBnXkFtZTcwMjYzNzU1OQ@@._V1_SX300.jpg', 'tt1723121', 'R'),
+(173, 'White House Down', 2013, 131, 'Action, Drama, Thriller', 'Roland Emmerich', 'Channing Tatum, Jamie Foxx, Maggie Gyllenhaal, Jason Clarke', 'http://ia.media-imdb.com/images/M/MV5BMTAyNzQyNTcwNjVeQTJeQWpwZ15BbWU3MDAwOTQ4Nzk@._V1_SX300.jpg', 'tt2334879', 'PG-13'),
+(174, 'World War Z', 2013, 116, 'Action, Adventure, Horror', 'Marc Forster', 'Brad Pitt, Mireille Enos, Daniella Kertesz, James Badge Dale', 'http://ia.media-imdb.com/images/M/MV5BMTg0NTgxMjIxOF5BMl5BanBnXkFtZTcwMDM0MDY1OQ@@._V1_SX300.jpg', 'tt0816711', 'PG-13'),
+(175, 'Wrath of the Titans', 2012, 99, 'Action, Adventure, Fantasy', 'Jonathan Liebesman', 'Sam Worthington, Liam Neeson, Ralph Fiennes, Édgar Ramírez', 'http://ia.media-imdb.com/images/M/MV5BMjMyMzk1Nzg3OF5BMl5BanBnXkFtZTcwOTQ2NjcxNw@@._V1_SX300.jpg', 'tt1646987', 'PG-13'),
+(176, 'Yes Man', 2008, 104, 'Comedy, Romance', 'Peyton Reed', 'Jim Carrey, Zooey Deschanel, Bradley Cooper, John Michael Higgins', 'http://ia.media-imdb.com/images/M/MV5BNjYyOTkyMzg2OV5BMl5BanBnXkFtZTcwODAxNjk3MQ@@._V1_SX300.jpg', 'tt1068680', 'PG-13'),
+(177, 'Youth in Revolt', 2009, 90, 'Comedy, Drama, Romance', 'Miguel Arteta', 'Michael Cera, Portia Doubleday, Jean Smart, Zach Galifianakis', 'http://ia.media-imdb.com/images/M/MV5BMjE3NTkxODUwOV5BMl5BanBnXkFtZTcwMjE4NjI5Mg@@._V1_SX300.jpg', 'tt0403702', 'R'),
+(178, 'Zero Dark Thirty', 2012, 157, 'Drama, History, Thriller', 'Kathryn Bigelow', 'Jason Clarke, Reda Kateb, Jessica Chastain, Kyle Chandler', 'http://ia.media-imdb.com/images/M/MV5BMTQ4OTUyNzcwN15BMl5BanBnXkFtZTcwMTQ1NDE3OA@@._V1_SX300.jpg', 'tt1790885', 'R');
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
