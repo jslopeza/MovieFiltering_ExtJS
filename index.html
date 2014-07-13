@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="X-UA-Compatibile" "IE-edge"/>
-    <title>Movies</title>
-
-     <!-- Importing the stylesheet for the widgets -->
-    <link rel="stylesheet" type="text/css" href="ext-5.0.0/packages/ext-theme-crisp/build/resources/ext-theme-crisp-all-debug.css">
-    <!-- Importing the Ext JS library -->
-    <script type="text/javascript" src="ext-5.0.0/build/ext-all.js"></script>
-
-	<script type="text/javascript" src="English.js"></script>
-
+	<title>English Movies</title>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
+	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.0/css/jquery.dataTables.css" />
 </head>
 <body>
+	<script type="text/javascript" src="table.js"></script>
+	<table id="table" class="display">
+		<thead>	
+			<tr>
+				<th>Poster</th>
+				<th>Title</th>
+				<th>Year</th>
+				<th>Rated</th>
+				<th>Runtime</th>
+				<th>Genre</th>
+				<th>Director</th>
+				<th>Actors</th>
+				
+			</tr>
+		</thead>
+		<tfoot>	
+			<tr>
+				<th>Poster</th>
+				<th>Title</th>
+				<th>Year</th>
+				<th>Rated</th>
+				<th>Runtime</th>
+				<th>Genre</th>
+				<th>Director</th>
+				<th>Actors</th>
+
+			</tr>
+		</tfoot>
+	</table>
 </body>
 </html>
