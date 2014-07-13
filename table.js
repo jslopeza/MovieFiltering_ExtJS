@@ -14,5 +14,10 @@ $(document).ready(function(){
 			{"mDataProp" : "director", "sWidth" : "150px"},
 			{"mDataProp" : "actors"},
 		],
+		"fnDrawCallback" : function(){
+			$('table tbody tr').click(function(){
+				alert(' ');
+			})
+		}
 	});
 });
